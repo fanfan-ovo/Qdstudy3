@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 助教答疑平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #eaf4ff 0%, #dbeafe 50%, #eff6ff 100%);
+      padding: 24px;
+    }
+
+    .wrap {
+      width: 640px;
+      max-width: 94vw;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #64748b;
+      margin-bottom: 34px;
+    }
+
+    .ask-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .ask-row input {
+      flex: 1;
+      padding: 14px 16px;
+      font-size: 16px;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background: #ffffff;
+      outline: none;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.08);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .ask-row input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .ask-row button {
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .ask-row button:hover {
+      opacity: 0.92;
+    }
+
+    .ask-row button:active {
+      transform: translateY(1px);
+    }
+
+    .reply {
+      position: relative;
+      text-align: left;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 40px 22px 22px;
+      box-shadow: 0 8px 26px rgba(59, 130, 246, 0.12);
+    }
+
+    .reply .tag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      border-radius: 14px 0 14px 0;
+      letter-spacing: 1px;
+    }
+
+    .reply .text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    .entry {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .entry a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 8px;
+    }
+
+    .entry a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>AI 助教答疑平台</h1>
+    <p class="subtitle">智能答疑・随时提问</p>
+
+    <div class="ask-row">
+      <input type="text" value="1" placeholder="请输入你的问题" aria-label="问题输入框">
+      <button type="button">提问</button>
+    </div>
+
+    <div class="reply">
+      <span class="tag">模拟回复</span>
+      <p class="text">这是第1个问题，AI接口将在第9周接入</p>
+    </div>
+
+    <p class="entry">
+      <a href="login.html">登录</a>·<a href="register.html">注册</a>
+    </p>
+  </div>
+</body>
+</html>
