@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录 - AI助教答疑平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #eff6ff 100%);
+      padding: 20px;
+    }
+
+    .card {
+      width: 400px;
+      max-width: 94vw;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.18);
+      padding: 44px 36px 36px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .logo .icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #1e3a5f;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #334155;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background: #f8fafc;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #94a3b8;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #3b82f6;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #475569;
+      cursor: pointer;
+    }
+
+    .remember input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #3b82f6;
+      cursor: pointer;
+    }
+
+    .forgot {
+      font-size: 14px;
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+    }
+
+    button[type="submit"]:hover {
+      opacity: 0.92;
+    }
+
+    button[type="submit"]:active {
+      transform: translateY(1px);
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .switch a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .switch a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="icon">🎓</div>
+    </div>
+    <h1>AI助教答疑平台</h1>
+    <p class="subtitle">欢迎回来，请登录您的账号</p>
+
+    <form action="#" method="post">
+      <div class="field">
+        <label for="account">用户名 / 邮箱</label>
+        <input type="text" id="account" name="account"
+               placeholder="请输入用户名或邮箱"
+               required autofocus autocomplete="username">
+      </div>
+
+      <div class="field">
+        <label for="password">密码</label>
+        <input type="password" id="password" name="password"
+               placeholder="请输入密码"
+               required autocomplete="current-password">
+      </div>
+
+      <div class="row">
+        <label class="remember">
+          <input type="checkbox" name="remember" value="1" checked>
+          记住我
+        </label>
+        <a class="forgot" href="#">忘记密码？</a>
+      </div>
+
+      <button type="submit">登 录</button>
+    </form>
+
+    <p class="switch">还没有账号？<a href="register.html">立即注册</a></p>
+  </div>
+</body>
+</html>
